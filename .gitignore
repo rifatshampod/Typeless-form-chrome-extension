@@ -1,0 +1,50 @@
+# Icons (these should be added by users)
+icon16.png
+icon48.png
+icon128.png
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Chrome Extension build files (if you add a build process)
+dist/
+build/
+*.crx
+*.pem
+*.zip
+
+# Node modules (if you add npm later)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
