@@ -28,9 +28,9 @@ typeless-forms-chrome-extension/
 └── README.md             # This file
 ```
 
-## 🚀 Installation
+## 🚀 Local Installation
 
-### Method 1: Load Unpacked (Development)
+### Load Unpacked (Development)
 
 1. **Clone or download** this repository to your local machine
 
@@ -44,15 +44,10 @@ typeless-forms-chrome-extension/
 
 6. **Add Icons** (Optional but recommended):
    - Create three PNG icons: `icon16.png`, `icon48.png`, `icon128.png`
-   - Place them in the root directory
+   - Place them in the `icons` directory
    - Or download free icons from [Icons8](https://icons8.com/) or [Flaticon](https://www.flaticon.com/)
 
-### Method 2: Package as .crx (Production)
 
-1. Follow steps 1-3 above
-2. Click "Pack extension"
-3. Select the extension directory
-4. Distribute the generated .crx file
 
 ## 📖 How to Use
 
