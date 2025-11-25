@@ -3,6 +3,8 @@
 
 A powerful Chrome extension that allows you to save custom label/value pairs and automatically fill forms on any web page. Built with Vanilla JavaScript and Chrome Manifest V3.
 
+[Chrome Web Store Link: Add To Chrome](https://chromewebstore.google.com/detail/typeless-form-auto-filler/dcmojhifgeaddhpliklgfdfdedmflgmj)
+
 ## ✨ Features
 
 - **Save Custom Data**: Store unlimited label/value pairs (e.g., email, phone, name)
@@ -48,7 +50,7 @@ typeless-forms-chrome-extension/
    - Place them in the `icons` directory
    - Or download free icons from [Icons8](https://icons8.com/) or [Flaticon](https://www.flaticon.com/)
 
-
+the last update is added in the chrome store for review. waiting for publishing. 
 
 ## 📖 How to Use
 
@@ -58,8 +60,8 @@ typeless-forms-chrome-extension/
 1. **Click the extension icon** in your Chrome toolbar
 2. **Enter a Label** (e.g., "email", "phone", "first name")
 3. **Enter a Value** (e.g., "john@example.com", "555-1234")
-4. **Click "Add Pair"**
-5. Repeat for all fields you want to auto-fill
+4. **Click "Add Pair"** or press enter
+5. Repeat for all fields you want to auto-fill 
 
 **Tip**: Use descriptive labels that match common form field names for better matching!
 
