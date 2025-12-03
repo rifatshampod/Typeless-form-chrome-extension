@@ -5,9 +5,9 @@
 ### ✨ New Features
 
 #### 1. Copy to Clipboard Feature
-- **Description**: Each saved field now has a copy button (📋) to copy its value to the clipboard
+- **Description**: Each saved field now has a copy button (⧉) to copy its value to the clipboard
 - **Location**: Next to the delete button on each saved pair
-- **How to use**: Click the clipboard icon to copy the value
+- **How to use**: Click the copy icon to copy the value
 - **Feedback**: Button shows ✓ (green) on success or ✗ (red) on failure for 1.5 seconds
 - **Browser Support**: 
   - Modern browsers: Uses Clipboard API
@@ -49,7 +49,7 @@
 
 5. **Modified `createPairItemHTML()` function**:
    - Added `.pair-actions` container div
-   - Added copy button with clipboard emoji (📋)
+   - Added copy button with linear icon (⧉)
    - Restructured layout to accommodate both buttons
 
 #### popup.css
@@ -93,7 +93,7 @@
 ### Test Copy Feature:
 1. ✅ Open the extension popup
 2. ✅ Add a test pair (e.g., email: test@example.com)
-3. ✅ Click the 📋 (clipboard) button
+3. ✅ Click the ⧉ (copy) button
 4. ✅ Button should briefly show ✓ in green
 5. ✅ Paste somewhere (Ctrl+V) to verify the value was copied
 6. ✅ Try copying multiple different fields
@@ -132,7 +132,7 @@
 ### After:
 ```
 ┌─────────────────────────────────────┐
-│ email                    [📋] [×]   │
+│ email                    [⧉] [×]    │
 │ john@example.com                    │
 └─────────────────────────────────────┘
 ```

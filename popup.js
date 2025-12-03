@@ -282,7 +282,7 @@ function createPairItemHTML(pair) {
         <div class="pair-value">${escapeHtml(pair.value)}</div>
       </div>
       <div class="pair-actions">
-        <button class="copy-btn" data-value="${escapeHtml(pair.value)}" title="Copy value to clipboard">📋</button>
+        <button class="copy-btn" data-value="${escapeHtml(pair.value)}" title="Copy value to clipboard">⧉</button>
         <button class="delete-btn" data-id="${pair.id}" title="Delete">×</button>
       </div>
     </div>

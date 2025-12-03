@@ -236,10 +236,11 @@ header h1 {
   cursor: pointer;
   padding: 4px 8px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   transition: all 0.2s;
   flex-shrink: 0;
+  font-weight: 400;
 }
 
 .copy-btn:hover {
