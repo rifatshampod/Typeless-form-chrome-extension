@@ -90,3 +90,4 @@ chrome.action.onClicked.addListener((tab) => {
 
 console.log('Form Auto-Filler: Background service worker loaded');
 
+

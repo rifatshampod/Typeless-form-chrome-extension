@@ -118,6 +118,20 @@ async function handleAddPair() {
  * @param {number} id - The ID of the pair to delete
  */
 async function handleDeletePair(id) {
+  // Find the pair to get its details for the confirmation message
+  const pair = formData.find(p => p.id === id);
+  if (!pair) return;
+  
+  // Show confirmation dialog
+  const confirmed = confirm(
+    `Delete this field?\n\nLabel: ${pair.label}\nValue: ${pair.value}\n\nThis action cannot be undone.`
+  );
+  
+  if (!confirmed) {
+    return; // User cancelled, don't delete
+  }
+  
+  // Proceed with deletion
   formData = formData.filter(pair => pair.id !== id);
   
   try {
@@ -129,6 +143,61 @@ async function handleDeletePair(id) {
     console.error('Error deleting pair:', error);
     showError('Failed to delete pair');
   }
+}
+
+/**
+ * Handle copying a value to clipboard
+ * @param {string} value - The value to copy
+ * @param {HTMLElement} button - The button element that was clicked
+ */
+async function handleCopyValue(value, button) {
+  try {
+    // Try modern Clipboard API first
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(value);
+      showCopyFeedback(button, true);
+    } else {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = value;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const success = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showCopyFeedback(button, success);
+    }
+  } catch (error) {
+    console.error('Error copying to clipboard:', error);
+    showCopyFeedback(button, false);
+  }
+}
+
+/**
+ * Show visual feedback for copy action
+ * @param {HTMLElement} button - The copy button element
+ * @param {boolean} success - Whether the copy was successful
+ */
+function showCopyFeedback(button, success) {
+  const originalHTML = button.innerHTML;
+  const originalBackground = button.style.background;
+  
+  if (success) {
+    button.innerHTML = '✓';
+    button.style.background = '#48bb78';
+    button.style.color = 'white';
+  } else {
+    button.innerHTML = '✗';
+    button.style.background = '#f56565';
+    button.style.color = 'white';
+  }
+  
+  setTimeout(() => {
+    button.innerHTML = originalHTML;
+    button.style.background = originalBackground;
+    button.style.color = '';
+  }, 1500);
 }
 
 /**
@@ -262,4 +331,5 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
 

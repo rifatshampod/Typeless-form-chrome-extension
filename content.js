@@ -270,3 +270,4 @@ function showNotification(message, type = 'info') {
   }, 4000);
 }
 
+
